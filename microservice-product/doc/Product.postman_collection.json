@@ -7,6 +7,41 @@
 	},
 	"item": [
 		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "antonio",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pwd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/service-product/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service-product",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Crear Producto Externo",
 			"request": {
 				"method": "POST",
@@ -19,13 +54,13 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYW50b25pbyIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDg4ODc4NjQsImV4cCI6MTcwODg4ODQ2NH0.Xog7hA1lItK6SVLCSCkrbucTYcbAdlgRicmTCIhQSYPx9qnYfT9Cp4IpTXMESRDMM8o7N-68ZIMdw7E2B89qog",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYW50b25pbyIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDg5MDUwMDcsImV4cCI6MTcwODkwNTYwN30.CltoXglJ8MfzJeTcZdm01SlbwLBDYQKPN2hh-3srKZQ3-vXPbi4C_7D78H2UANhrWQmJeUBYXioEpR9hE0QpCA",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n    \t\"nombre\": \"Lechuga Hac\",\n    \t\"codigo\": \"8437008459059\",\n    \t\"proveedor\": \"\",\n    \t\"destino\": \"\"\n    }\n    ",
+					"raw": "    {\n    \t\"nombre\": \"Lechuga Prue\",\n    \t\"codigo\": \"8480000160072\",\n    \t\"proveedor\": \"\",\n    \t\"destino\": \"\"\n    }\n    ",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -33,12 +68,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8662/service-product/api/v1/products",
+					"raw": "http://localhost:8080/service-product/api/v1/products",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8662",
+					"port": "8080",
 					"path": [
 						"service-product",
 						"api",
@@ -63,7 +98,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n    \t\"nombre\": \"Lechuga\",\n    \t\"codigo\": 8480000160072,\n    \t\"proveedor\": \"\",\n    \t\"destino\": \"\"\n    }\n    ",
+					"raw": "    {\n    \t\"nombre\": \"Lechuga\",\n    \t\"codigo\": 8437008459059,\n    \t\"proveedor\": \"\",\n    \t\"destino\": \"\"\n    }\n    ",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -71,7 +106,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8662/service-product/api/v1/products",
+					"raw": "http://localhost:8662/service-product/api/v1/user",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -81,7 +116,7 @@
 						"service-product",
 						"api",
 						"v1",
-						"products"
+						"user"
 					]
 				}
 			},
@@ -111,47 +146,18 @@
 			"response": []
 		},
 		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "user",
-							"value": "antonio",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "pwd",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:8662/service-product/user",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8662",
-					"path": [
-						"service-product",
-						"user"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Actualizar Producto",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYW50b25pbyIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDg5MDUwMDcsImV4cCI6MTcwODkwNTYwN30.CltoXglJ8MfzJeTcZdm01SlbwLBDYQKPN2hh-3srKZQ3-vXPbi4C_7D78H2UANhrWQmJeUBYXioEpR9hE0QpCA",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://localhost:8662/service-product/1/nombre/cambioNombre",
+					"raw": "http://localhost:8662/service-product/8437008459059/nuevoNombre/atún",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -159,9 +165,16 @@
 					"port": "8662",
 					"path": [
 						"service-product",
-						"1",
-						"nombre",
-						"cambioNombre"
+						"8437008459059",
+						"nuevoNombre",
+						"atún"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYW50b25pbyIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDg5MDUwMDcsImV4cCI6MTcwODkwNTYwN30.CltoXglJ8MfzJeTcZdm01SlbwLBDYQKPN2hh-3srKZQ3-vXPbi4C_7D78H2UANhrWQmJeUBYXioEpR9hE0QpCA",
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -171,9 +184,15 @@
 			"name": "Eliminar Producto",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYW50b25pbyIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDg5MDYyMTUsImV4cCI6MTcwODkwNjgxNX0.aXl7f5KY7B8gjxVboCYrmPJx9wSDxsAr_bHIXQlspiuilF2VwvhvYvupVW0NvGWw7RRcwhaJzERA3iIIgNlxZw",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://localhost:8662/service-product/api/v1/products/1",
+					"raw": "http://localhost:8662/service-product/api/v1/products/8437008459059?",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -184,7 +203,13 @@
 						"api",
 						"v1",
 						"products",
-						"1"
+						"8437008459059"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
 					]
 				}
 			},
