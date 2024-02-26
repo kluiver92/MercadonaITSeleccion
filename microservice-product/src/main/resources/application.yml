@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:product
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+    jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console.enabled: true
+  application:
+    name: microservice-product
+server:
+  servlet:
+    context-path: /service-product
+  port: 8662 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true 
+    hostname: ${COMPUTERNAME}
+
+ 
+
+  

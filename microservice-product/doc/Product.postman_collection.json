@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "e26ae54f-3296-4941-95e3-f9ae91e6acc3",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10074139"
+	},
+	"item": [
+		{
+			"name": "Crear Producto Externo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYW50b25pbyIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDg4ODc4NjQsImV4cCI6MTcwODg4ODQ2NH0.Xog7hA1lItK6SVLCSCkrbucTYcbAdlgRicmTCIhQSYPx9qnYfT9Cp4IpTXMESRDMM8o7N-68ZIMdw7E2B89qog",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n    \t\"nombre\": \"Lechuga Hac\",\n    \t\"codigo\": \"8437008459059\",\n    \t\"proveedor\": \"\",\n    \t\"destino\": \"\"\n    }\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8662/service-product/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8662",
+					"path": [
+						"service-product",
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Producto Hacendado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n    \t\"nombre\": \"Lechuga\",\n    \t\"codigo\": 8480000160072,\n    \t\"proveedor\": \"\",\n    \t\"destino\": \"\"\n    }\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8662/service-product/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8662",
+					"path": [
+						"service-product",
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8662/service-product/api/v1/products/8480000160072",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8662",
+					"path": [
+						"service-product",
+						"api",
+						"v1",
+						"products",
+						"8480000160072"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "antonio",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pwd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8662/service-product/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8662",
+					"path": [
+						"service-product",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8662/service-product/1/nombre/cambioNombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8662",
+					"path": [
+						"service-product",
+						"1",
+						"nombre",
+						"cambioNombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8662/service-product/api/v1/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8662",
+					"path": [
+						"service-product",
+						"api",
+						"v1",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
